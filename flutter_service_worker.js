@@ -6,7 +6,7 @@ const RESOURCES = {
   "version.json": "7f98ba358ff757a24ef853da9611e0b7",
 "index.html": "f39dc172c5516139d4d6139d6181bf78",
 "/": "f39dc172c5516139d4d6139d6181bf78",
-"main.dart.js": "1f3d4d8ea1bf8623ba1016a827d919ea",
+"main.dart.js": "d5836d88741db1fbc9e8b565a5ff864f",
 "favicon.png": "5dcef449791fa27946b3d35ad8803796",
 "icons/Icon-192.png": "ac9a721a12bbc803b44f645561ecb1e1",
 "icons/Icon-512.png": "96e752610906ba2a93c65f8abe1645f1",
@@ -16,16 +16,11 @@ const RESOURCES = {
 "assets/FontManifest.json": "dc3d03800ccca4601324923c0b1d6d57",
 "assets/packages/cupertino_icons/assets/CupertinoIcons.ttf": "6d342eb68f170c97609e9da345464e5e",
 "assets/fonts/MaterialIcons-Regular.otf": "4e6447691c9509f7acdbf8a931a85ca1",
-"assets/assets/movie.jpg": "cb5e5d21b8f4f8b06756444d62446440",
 "assets/assets/movie.png": "e9dd6ac3c4f34aa6edf384a5a303869c",
 "assets/assets/metflix.png": "d6aa19382c8e944ec65b054f87245b94",
 "assets/assets/function.png": "066730cb31d768c2ee9c243c04c9efd3",
 "assets/assets/tesla.png": "aca587e0cb8d42315132baa15fa51d57",
-"assets/assets/weather.png": "730880ba081a1df625a4fd6dda98bd4c",
-"canvaskit/canvaskit.js": "43fa9e17039a625450b6aba93baf521e",
-"canvaskit/profiling/canvaskit.js": "f3bfccc993a1e0bfdd3440af60d99df4",
-"canvaskit/profiling/canvaskit.wasm": "a9610cf39260f60fbe7524a785c66101",
-"canvaskit/canvaskit.wasm": "04ed3c745ff1dee16504be01f9623498"
+"assets/assets/weather.png": "730880ba081a1df625a4fd6dda98bd4c"
 };
 
 // The application shell files that are downloaded before a service worker can
