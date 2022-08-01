@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, minimum-scale=1.0, maximum-scale=3.0">
+<title>Retail Service</title>
+<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.3.1.min.js">
+</script>
+</head>
+<body style="margin-left: 0px">
+결제 인증 진행 중 입니다.
+<div id="kispg"></div>
+
+<script type="text/javascript">
+  window.addEventListener('message', returnData, false);
+
+  $(document).ready(function(){
+    let PAYMENT_DB = {"CD_HEAD":"$CD_HEAD","CD_STORE":"$CD_STORE","NO_TABLE":"$NO_TABLE","DS_ORDER":"$DS_ORDER","DS_STATUS":"O", "SEQ":"$SEQ"};
+    let PG_DATA = {"payMethod":"card","goodsNm":"$goodsNm","ordNo":"$ordNo","goodsAmt":"$goodsAmt","goodsSplAmt":"$goodsSplAmt","goodsVat":"$goodsVat","goodsSvsAmt":"0","ordNm":"$ordNm",
+        "ordTel":"$ordTel","ordEmail":"","merchantKey":"$merchantKey","returnUrl":"$returnUrl","mid":"$merchantID","trxCd":"0",
+        "userIp":"0:0:0:0:0:0:0:1","mbsUsrId":"user1234","ordGuardEmail":"","rcvrAddr":"서울특별시","rcvrPost":"00100","mbsIp":"127.0.0.1",
+        "mbsReserved":"MallReserved","rcvrMsg":"rcvrMsg","payReqType":"1","model":"WEB","charSet":"UTF-8"};
+    let data = { PAYMENT_DB, PG_DATA };
+
+    $.ajax({
+      type: 'post',
+      url: '$actionUrl',
+      data: JSON.stringify(data),
+      dataType: 'html',
+      headers: { 'Content-Type': 'application/json' },
+      success: function(data) {
+        $('#kispg').html(data);
+      },
+      error: function(err) {
+        console.log('pg post error');
+        window.parent.postMessage('Success', '*');
+        webToAppChange.postMessage('Success');
+      }
+    });
+  })
+
+  function returnData(e) {
+    console.log('e: ', );
+  }
+</script>
+</body>
+</html>
